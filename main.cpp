@@ -15,8 +15,8 @@ Snake *s;
 Fruit *f;
 GameManager *gm;
 DirectonEnum dir;
-int tailX[100];
-int tailY[100];
+int tailX[400];
+int tailY[400];
 
 std::mutex mutex;
 
@@ -221,6 +221,12 @@ void Logic()
         f->setPosX(int_rad(0, WIDTH) % WIDTH);
         f->setPosY(int_rad(0, HEIGHT) % HEIGHT);
         s->increaseLength();
+
+        // Win game
+        if (s->getLenght() == WIDTH * HEIGHT)
+        {
+            gm->setGameOver(true);
+        }
     }
 }
 /**
