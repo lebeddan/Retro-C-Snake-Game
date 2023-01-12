@@ -268,10 +268,10 @@ int main()
     }*/
 
     Init();
-    char again = 'n';
+    std::string again = "n";
     do
     {
-        if (again == 'y')
+        if (again == "y")
         {
             Reset();
         }
@@ -296,9 +296,18 @@ int main()
 
         // Play again?
         std::cout << std::endl << "Current Score: " <<  gm->getScore()  << std::endl;;
-        std::cout << "Want to play again? [y/n]: ";
-        std::cin >> again;
-    } while (again == 'y');
+
+        while (true)
+        {
+            std::cout << "Want to play again? [y/n]: ";
+            std::cin >> again;
+            if (again == "y" || again == "n") break;
+            else
+            {
+                std::cout << "Error key, please try again!" << std::endl;
+            }
+        }
+    } while (again == "y");
 
     std::cout << std::endl << "Thanks for playing the C++ Snake Game!" << std::endl;
     std::cout << "Goodbye!" << std::endl << std::endl;
