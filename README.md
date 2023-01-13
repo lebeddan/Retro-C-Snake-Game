@@ -2,6 +2,6 @@
 
 **Semestral work for PCC(Programming in C++) FEL CTU.**
 
-[Home](https://gitlab.fel.cvut.cz/lebeddan/pcc_semproj_snake/-/wikis/Home)
+[Home](https://github.com/lebeddan/Retro-C-Snake-Game/wiki)
 
 Author - Lebedev Daniil(lebeddan)
